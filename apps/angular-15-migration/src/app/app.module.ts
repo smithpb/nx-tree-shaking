@@ -4,14 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { ParentModule } from '@test-migration/parent';
-import * as apiUnused from '@test-migration/services';
+import * as apiServices from '@test-migration/services';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [BrowserModule, ParentModule],
   providers: [
     {
-      provide: apiUnused.BASE_PATH,
+      provide: apiServices.BASE_PATH,
       useFactory: () => 'token',
     },
   ],
